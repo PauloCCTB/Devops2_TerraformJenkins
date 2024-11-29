@@ -13,7 +13,7 @@ resource "aws_instance" "web1" {
 	sudo yum install -y httpd 
 	sudo systemctl start httpd 
 	sudo systemctl enable httpd 
-	echo "<html><body style='background-color:red;'><h1 style='color:white;'>Hello World Prod 1</h1></body></html>" | sudo tee /var/www/html/helloworld.html
+	echo "<html><body style='background-color:red;'><h1 style='color:white;'>Hello World Prod 1</h1></body></html>" | sudo tee /var/www/html/index.html
 	EOF
 }
 
@@ -32,7 +32,7 @@ resource "aws_instance" "web2" {
 	sudo yum install -y httpd 
 	sudo systemctl start httpd 
 	sudo systemctl enable httpd 
-	echo "<html><body style='background-color:blue;'><h1 style='color:white;'>Hello World Prod2</h1></body></html>" | sudo tee /var/www/html/helloworld.html
+	echo "<html><body style='background-color:blue;'><h1 style='color:white;'>Hello World Prod2</h1></body></html>" | sudo tee /var/www/html/index.html
 	EOF
 }
 
